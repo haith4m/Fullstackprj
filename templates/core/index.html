@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <link rel="stylesheet" href="{% /static 'stylesheet.css' %}">
     <link rel="icon" type="image/x-icon" href="img/coffee.png">
     <title>Bean and Brew</title>
 </head>
 <body>
-    <div class="link"><a href="index.html">home</a></div>
+    <div class="link"><a href="/templates/core/index.html">home</a></div>
     <h1>Bean and Brew</h1>
     <hr>
-    <a href="login.html" >
+    <a href="/templates/core/login.html" >
     
     <br>
     <br>
@@ -32,9 +32,9 @@
     <div class="footer">
         <hr>
         <h3>
-            <a href=""><img src="img/twitter.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/instagram.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/youtube.png" alt="" class="social-icon"></a>
+            <a href=""><img src="/static/img/twitter.png" alt="" class="social-icon"></a>
+            <a href=""><img src="/static/img/instagram.png" alt="" class="social-icon"></a>
+            <a href=""><img src="/static/img/youtube.png" alt="" class="social-icon"></a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
