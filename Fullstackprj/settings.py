@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'core',
-    'login',
+   
 ]
 
 MIDDLEWARE = [
