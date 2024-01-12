@@ -1,0 +1,40 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgotten Account Details</title>
+    <link rel="stylesheet" href="{%static '../static/assets/stylesheet4.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
+</head>
+<body>
+    <h1>Forgotten Username?</h1>
+    <form>  
+        <div class="container">   
+            <label>Email:</label>   
+            <input type="text" placeholder="Enter Email" name="Email" required> <br>
+            <p>A username reminder email will be sent shortly</p>
+            <button type="submit">Submit</button> <br> 
+        </div>   
+    </form>
+    <div class="footer">
+        <div class="footer">
+        
+            <h3>
+                <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+                <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+                <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
+            </h3>
+        </div>  
+        
+    </div>
+</body>
+</html>

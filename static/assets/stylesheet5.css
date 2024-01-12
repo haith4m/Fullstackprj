@@ -1,0 +1,97 @@
+body{
+    text-align: center;
+    min-height: 100vh;
+    background-image: url("assets/top-view-coffee-accessories-table.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    color: white;
+    background-size: cover
+}
+
+
+.link{
+    text-align: left;
+}
+
+
+h1{
+    text-align: center;
+}
+
+button {   
+  background-color: burlywood;   
+  width: 50%;  
+   color: white;   
+   padding: 15px;   
+   margin: 10px 0px;   
+   border: none;   
+   cursor: pointer;   
+    } 
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.social-icon {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 5px; /* Add some spacing between icons */
+}
+
+ .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    
+ }
+ button:hover {   
+    opacity: 0.7;   
+}  
+
+
+a{
+    color: burlywood;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+.strokeme{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}

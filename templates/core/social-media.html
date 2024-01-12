@@ -1,39 +1,40 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet10.css">
-    <link rel="icon" type="image/x-icon" href="img/coffee.png">
+    <link rel="icon" type="image/x-icon" href="{%static '../assets/stylesheet9.css'%}">
+    <link rel="icon" type="image/x-icon" href="{%static '../assets/coffee.png'%}">
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
     <title>Share on Social Media(Rate my cake)</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Share on Social Media</h1><hr>
-        <div class="link"><a href="index.html">home</a>
-            
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <img src="img/social-media.png" alt="">
-    <h3>Share on Social Media</h3>
-    <a href="ratings.html"><button>Yes</button></a>
-    <a href="services.html"><button>No</button></a>
+<h1>Share on Social Media</h1><hr>
+        
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="{% static '../static/assets/booking.png' %}" alt="">
+    <h3>Share on Social Media</h3>
+    <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
+    <a href="{% url 'core:services'%}"><button>No</button></a>
 
 
 
     <div class="footer">
-        <hr>
+    
         <h3>
-            <a href=""><img src="img/twitter.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/instagram.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/youtube.png" alt="" class="social-icon"></a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
     

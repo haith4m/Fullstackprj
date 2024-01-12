@@ -1,33 +1,55 @@
-<!DOCTYPE html>
+
+{%load static%}
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static '../static/assets/stylesheet5.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet5.css">
-    <link rel="icon" type="image/x-icon" href="img/coffee.png">
+    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <title>Services</title>
+
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
     <title>Services</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Our Services</h1><hr>
-        <div class="link"><a href="index.html">home</a>
-    </div>
-    
-   <a href="space.html">
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="strokeme"><h1>Shop</h1></div>
+  <div class="container">
+   <a href="{% url 'core:space'%}">
     <button>Book a space</button>
    </a>
-   <a href="baking.html">
+   <br>
+   <br>
+   <a href="{% url 'core:baking'%}">
     <button>Book online baking lessons</button>
    </a>
-   <a href="collection.html">
+   <br>
+   <br>
+   <a href="{% url 'core:collection'%}">
     <button>Order baked goods for collection</button>
    </a>
-   <a href="custom.html"> 
+   <br>
+   <br>
+   <a href="{% url 'core:custom'%}"> 
     <button>Order customisable baked hampers </button>
    </a>
-   <a href="social-media.html"> 
+   <br>
+   <br>
+   <a href="{% url 'core:social-media'%}"> 
     <button>Share on Social Media (Rate my cake)</button>
    </a>
+   <br>
+   <br>
 </div>
 
 
@@ -38,16 +60,15 @@
 
 
 
-
+    <br>
+    <br>
+    <br>
     <div class="footer">
-        <hr>
+    
         <h3>
-            <a href=""><img src="img/twitter.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/instagram.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/youtube.png" alt="" class="social-icon"></a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
     

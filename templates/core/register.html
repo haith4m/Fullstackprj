@@ -1,15 +1,23 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet3.css">
-    <link rel="icon" type="image/x-icon" href="img/coffee.png">
+    <link rel="stylesheet" href="{%static '../static/assets/stylesheet3.css'%}">
+    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
     <title>Register Page</title>
 </head>
 <body>
     <h1>Register Page</h1><hr>
-    <div class="link"><a href="index.html">home</a></div>
+    
     <form>  
         <div class="container">   
             <label>Username:</label>   
@@ -23,15 +31,13 @@
         </div>   
     </form>
     <div class="footer">
-        <hr>
+        
         <h3>
-            <a href=""><img src="img/twitter.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/instagram.png" alt="" class="social-icon"></a>
-            <a href=""><img src="img/youtube.png" alt="" class="social-icon"></a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
+</body>
 </body>
 </html>

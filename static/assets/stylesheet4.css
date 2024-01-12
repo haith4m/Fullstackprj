@@ -1,35 +1,33 @@
 body{
-    text-align: center;
-    min-height: 100vh;
-    background-image: url("img/top-view-coffee-accessories-table.jpg");
-    background-repeat: no-repeat;
-    height: 100%;
-    background-position: center;
-    color: #000000;
-    background-size: cover
+  text-align: center;
+  min-height: 100vh;
+  background-image: url("assets/top-view-coffee-accessories-table.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  color: white;
+  background-size: cover
 }
 
-
+.link{
+    text-align: left;
+}
 
 h1{
     text-align: center;
-    color: burlywood;
 }
 
 button {   
     background-color: burlywood;   
     width: 100%;  
-     color: white;
+     color: white;   
      padding: 15px;   
      margin: 10px 0px;   
      border: none;   
-     cursor: pointer;
-     width: 30%;
-     border: 3px ;
-     border-radius: 45%;
+     cursor: pointer;   
       }   
 form {   
-     border: px solid #f1f1f1;   
+     border: 3px solid #f1f1f1;   
  }   
 input[type=text], input[type=password] {   
      width: 100%;   
@@ -49,37 +47,24 @@ button:hover {
  }   
      
   
-.container {
-     border-radius: 12%;
+.container {   
      padding: 25px;   
-     background-color: rgb(31, 9, 9);
-     border-color: white;
-     margin: auto;
-     width: 25%;
-     height: 60%;
-     padding: 20px;
-     opacity: 0.8;
-     color: burlywood;
-     padding-bottom: 25px;
+     background-color: white;  
  }  
 
-.link{
-    text-align: left;
-}
-
-.footer {
+ .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
+    background-color: burlywood;
  }
  .social-icon {
     width: 30px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
     margin: 0 5px; /* Add some spacing between icons */
 }
-
  .header {
     position: fixed;
     left: 0;
@@ -87,3 +72,37 @@ button:hover {
     width: 100%;
     text-align: center;
  }
+
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    opacity: 0.7;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .strokeme{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}

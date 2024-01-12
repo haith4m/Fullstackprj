@@ -1,19 +1,29 @@
-
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static '../static/assets/stylesheet.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/coffee.png">
+    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <ul>
+        <li><a href="{% url 'core:index'%}">Home</a></li>
+        <li><a href="{% url 'core:index'%}">News</a></li>
+        <li><a href="{% url 'core:index'%}">Contact</a></li>
+        <li><a href="{% url 'core:index'%}">About</a></li>
+    </ul>
     <title>Bean and Brew</title>
 </head>
 <body>
-    <div class="link"><a href="/templates/core/index.html">home</a></div>
-    <h1>Bean and Brew</h1>
+
+
+    <div class="homepic">
+        
+    </div>
+    <br>
+    <br>
+    <div class="strokeme"><h1>Bean and Brew</h1></div>
     <hr>
-    <a href="/templates/core/login.html" >
-    
     <br>
     <br>
     <br>
@@ -26,18 +36,24 @@
     <br>
     <br>
     <br>
-    <br>
-    <button id="box">Login!</button>
+    <a href="{% url 'core:login'%}" >
+    <button>Login!</button>
     </a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> <br>
+    <br>
+   
+
+    
     <div class="footer">
-        <hr>
+    
         <h3>
-            <a href=""><img src="/static/img/twitter.png" alt="" class="social-icon"></a>
-            <a href=""><img src="/static/img/instagram.png" alt="" class="social-icon"></a>
-            <a href=""><img src="/static/img/youtube.png" alt="" class="social-icon"></a>
-            <a href="/templates/core/contact.html">Contact</a>
-            <a href="/templates/core/about.html">About</a>
-            <a href="/templates/core/services.html">Services</a>
+            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
 
