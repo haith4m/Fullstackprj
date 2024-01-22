@@ -1,11 +1,11 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{%static '../assets/stylesheet7.css'%}">
-    <link rel="icon" type="image/x-icon" href="{%static '../assets/coffee.png'%}">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
     <ul>
         <li><a href="{% url 'core:index'%}">Home</a></li>
         <li><a href="{% url 'core:index'%}">News</a></li>
@@ -14,6 +14,7 @@
     </ul>
     <title>Book online baking lessons</title>
 </head>
+
 <body>
 <br>
 <br>
@@ -23,7 +24,7 @@
     <br>
     <br>
     <br><br><br>
-    <img src="{% static '../static/assets/booking.png' %}" alt="">
+    <img src="{% static '../static/assets/video-lesson.png' %}" alt="">
     <h3>Book online baking lessons</h3>
     <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
     <a href="{% url 'core:services'%}"><button>No</button></a>

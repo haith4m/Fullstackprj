@@ -1,11 +1,11 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{%static '../assets/stylesheet9.css'%}">
-    <link rel="icon" type="image/x-icon" href="{%static '../assets/coffee.png'%}">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
     <ul>
         <li><a href="{% url 'core:index'%}">Home</a></li>
         <li><a href="{% url 'core:index'%}">News</a></li>
@@ -15,6 +15,7 @@
     <title>Share on Social Media(Rate my cake)</title>
 </head>
 <body>
+    <br><br>
 <h1>Share on Social Media</h1><hr>
         
 
@@ -22,7 +23,7 @@
     <br>
     <br>
     <br>
-    <img src="{% static '../static/assets/booking.png' %}" alt="">
+    <img src="{% static '../static/assets/social-media.png' %}" alt="lol">
     <h3>Share on Social Media</h3>
     <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
     <a href="{% url 'core:services'%}"><button>No</button></a>

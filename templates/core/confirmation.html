@@ -1,11 +1,11 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{%static '../assets/stylesheet11.css'%}">
-    <link rel="icon" type="image/x-icon" href="{%static '../assets/coffee.png'%}">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{%static '../static/assets/stylesheet11.css'%}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
     <ul>
         <li><a href="{% url 'core:index'%}">Home</a></li>
         <li><a href="{% url 'core:index'%}">News</a></li>

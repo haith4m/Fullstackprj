@@ -1,10 +1,11 @@
 body{
   text-align: center;
   min-height: 100vh;
-  background-image: url("assets/top-view-coffee-accessories-table.jpg");
+  background-image: url(/static/assets/top-view-coffee-accessories-table.jpg);
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
+  
   background-size: cover
 }
 
@@ -15,7 +16,7 @@ h1{
 
 button {   
     background-color: burlywood;   
-    width: 55%;  
+    width: 25%;  
      color: white;   
      padding: 15px;   
      margin: 10px 0px;   
@@ -23,8 +24,15 @@ button {
      cursor: pointer;   
       }   
 form {   
-     border: 3px solid #f1f1f1;   
+     border: 3px ;
+     width: 75%;
+     display: inline-block;
+     color: #000;
  }   
+
+
+
+
 input[type=text], input[type=password] {   
      width: 100%;   
      margin: 8px 0;  
@@ -90,7 +98,7 @@ button:hover {
   
   li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -101,7 +109,7 @@ button:hover {
   }
 
   .strokeme{
-    color: white;
+    color: black;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
