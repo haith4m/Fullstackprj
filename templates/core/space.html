@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
+    <script src="{% static '../static/assets/booking.js' %}"></script>
     <ul>
         <li><a href="{% url 'core:index'%}">Home</a></li>
         <li><a href="{% url 'core:index'%}">News</a></li>
@@ -26,8 +27,80 @@
     <br>
     <img src="{% static '../static/assets/booking.png' %}" alt="">
     <h3>Book a Space</h3>
+
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkin-date">Check-in Date</label>
+          <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+        <div class="elem-group inlined">
+          <label for="checkout-date">Check-out Date</label>
+          <input type="date" id="checkout-date" name="checkout" required>
+        </div>
+        <div class="elem-group">
+          <label for="room-selection">Select Resturaunt Branch</label>
+          <select id="room-selection" name="room_preference" required>
+              <option value="">Choose a Branch from the List</option>
+              <option value="connecting">Harrogate</option>
+              <option value="adjoining">Leeds</option>
+              <option value="adjacent">Knaresborough Castle</option>
+          </select>
+        </div>
+        
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <button type="submit">Book The Tables</button>
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
     <a href="{% url 'core:services'%}"><button>No</button></a>
+
+
+    
     
     
     
