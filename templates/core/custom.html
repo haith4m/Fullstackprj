@@ -25,8 +25,53 @@
     <br>
     <img src="{% static '../static/assets/bakery.png' %}" alt="">
     <h3>Order customisable baked goods</h3>
-    <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
-    <a href="{% url 'core:services'%}"><button>No</button></a>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <div class="elem-group">
+            <label for="room-selection">Select Items(Ctrl click to select multiple items)</label>
+            <select id="room-selection" name="room_preference[]" multiple="multiple" size="5" required>
+                <option value="porridge">Porridge</option>
+                <option value="pressed-sandwich">Pressed Sandwich</option>
+                <option value="omelette">Omelette</option>
+                <option value="beans-on-toast">Beans on Toast</option>
+                <option value="pancakes">Pancakes</option>
+                <option value="brownie">Brownie</option>
+                <option value="croissant">Croissant</option>
+                <option value="eclair">Eclair</option>
+                <option value="muffin">Muffin</option>
+                <option value="cinnamon-bun">Cinnamon Bun</option>
+                <option value="sliced-bread">Sliced Bread</option>
+            </select>
+        </div>
+        <div class="elem-group">
+          <label for="room-selection">Select Resturaunt Branch</label>
+          <select id="room-selection" name="room_preference" required>
+              <option value="">Choose a Branch from the List</option>
+              <option value="connecting">Harrogate</option>
+              <option value="adjoining">Leeds</option>
+              <option value="adjacent">Knaresborough Castle</option>
+          </select>
+        </div>
+        
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <a href="{% url 'core:confirmation'%}"><button type="submit">Book The Item</button></a>
+        
+     </form>
+     <a href="{% url 'core:services'%}"><button>Cancel</button></a>
 
 
 

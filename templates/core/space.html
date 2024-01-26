@@ -72,32 +72,10 @@
           <label for="message">Anything Else?</label>
           <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
         </div>
-        <button type="submit">Book The Tables</button>
+        <a href="{% url 'core:confirmation'%}"><button type="submit">Book The Tables</button></a>
+
       </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
-    <a href="{% url 'core:services'%}"><button>No</button></a>
+    <a href="{% url 'core:services'%}"><button>Cancel</button></a>
 
 
     

@@ -28,8 +28,26 @@
     
     
     <h3>Book online baking lessons</h3>
-    <a href="{% url 'core:confirmation'%}"><button>Yes</button></a>
-    <a href="{% url 'core:services'%}"><button>No</button></a>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <a href="{% url 'core:confirmation'%}"><button type="submit">Book The Onine Lesson</button></a>
+      </form>
+      <a href="{% url 'core:services'%}"><button>Cancel</button></a>
     
 
 
