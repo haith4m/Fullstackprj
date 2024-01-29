@@ -16,6 +16,9 @@ urlpatterns = [
     path("social-media/", social_media, name="social-media"),
     path("confirmation", confirmation, name="confirmation"),
     path("baking/", baking, name="baking"),
+    path("news/", news, name="news"),
+    path("contact/", contact, name="contact"),
+    path("about/", about, name="about"),
 
 
 

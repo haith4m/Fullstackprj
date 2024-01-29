@@ -36,6 +36,15 @@ def social_media(request):
 def confirmation(request):
     return render(request,'core/confirmation.html')
 
+def news(request):
+    return render(request,'core/news.html')
+
+def about(request):
+    return render(request,'core/about.html')
+
+def contact(request):
+    return render(request,'core/contact.html')
+
 
 
 
