@@ -6,17 +6,17 @@
         <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
-    <ul>
-        <li><a href="{% url 'core:index'%}">Home</a></li>
-        <li><a href="{% url 'core:news'%}">News</a></li>
-        <li><a href="{% url 'core:contact'%}">Contact</a></li>
-        <li><a href="{% url 'core:about'%}">About</a></li>
-    </ul>
+        <ul>
+            <li><a href="{% url 'core:index'%}">Home</a></li>
+            <li><a href="{% url 'core:news'%}">News</a></li>
+            <li><a href="{% url 'core:contact'%}">Contact</a></li>
+            <li><a href="{% url 'core:about'%}">About</a></li>
+        </ul>
     <title>Order customisable baked goods</title>
 </head>
 <body>
     <br><br>
-<h1>Order customisable baked goods</h1><hr>
+<h1 class="strokeme">Order customisable baked goods</h1><hr>
             
     
     <br>
@@ -55,7 +55,7 @@
             </select>
         </div>
         <div class="elem-group">
-          <label for="room-selection">Select Resturaunt Branch</label>
+          <label for="room-selection">Select Restaurant Branch</label>
           <select id="room-selection" name="room_preference" required>
               <option value="">Choose a Branch from the List</option>
               <option value="connecting">Harrogate</option>

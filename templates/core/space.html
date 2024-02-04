@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
     <script src="{% static '../static/assets/booking.js' %}"></script>
-    <ul>
-        <li><a href="{% url 'core:index'%}">Home</a></li>
-        <li><a href="{% url 'core:index'%}">News</a></li>
-        <li><a href="{% url 'core:index'%}">Contact</a></li>
-        <li><a href="{% url 'core:index'%}">About</a></li>
-    </ul>
+    
+  <ul>
+      <li><a href="{% url 'core:index'%}">Home</a></li>
+      <li><a href="{% url 'core:news'%}">News</a></li>
+      <li><a href="{% url 'core:contact'%}">Contact</a></li>
+      <li><a href="{% url 'core:about'%}">About</a></li>
+  </ul>
     <title>Book a Space</title>
 </head>
 <body>
-    <br><br>
+  
+    <br>
+    <br>
 <h1>Book a Space</h1><hr>
         
             
@@ -39,7 +42,7 @@
         </div>
         <div class="elem-group">
           <label for="phone">Your Phone</label>
-          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07570777553" pattern="[0-9]{3}-[0-9]{3}-[0-9]{5}" required>
         </div>
         
         <div class="elem-group inlined">

@@ -6,17 +6,27 @@
         <link rel="stylesheet" href="{%static '../static/assets/stylesheet6.css'%}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
-        <ul>
-        <li><a href="{% url 'core:index'%}">Home</a></li>
-        <li><a href="{% url 'core:index'%}">News</a></li>
-        <li><a href="{% url 'core:index'%}">Contact</a></li>
-        <li><a href="{% url 'core:index'%}">About</a></li>
-    </ul>
+      <ul>
+          <li><a href="{% url 'core:index'%}">Home</a></li>
+          <li><a href="{% url 'core:news'%}">News</a></li>
+          <li><a href="{% url 'core:contact'%}">Contact</a></li>
+          <li><a href="{% url 'core:about'%}">About</a></li>
+      </ul>
     <title>Order baked goods for collection</title>
 </head>
 <body>
 <br><br>
 <h1>Order baked goods for collection</h1><hr>
+
+
+
+<img class="pic" src="{% static '../static/assets/crossiant.png' %}" alt="">
+<img class="pic" src="{% static '../static/assets/cinnamon.webp' %}" alt="">
+<img class="pic" src="{% static '../static/assets/eclair.png' %}" alt="">
+<img class="pic" src="{% static '../static/assets/muffin.png' %}" alt="">
+<img class="pic" src="{% static '../static/assets/brownie.webp' %}" alt="">
+
+
 
             
     <br>
@@ -42,22 +52,15 @@
         <div class="elem-group">
             <label for="room-selection">Select Item</label>
             <select id="room-selection" name="room_preference" required>
-                <option value="">Choose an item from the List</option>
-                <option value="connecting">Porridge</option>
-                <option value="adjoining">Pressed Sandwich</option>
-                <option value="adjacent">Omlette</option>
-                <option value="adjacent">Beans on Toast</option>
-                <option value="adjacent">Pancakes</option>
                 <option value="adjacent">Brownie</option>
                 <option value="adjacent">Croissant</option>
                 <option value="adjacent">Eclair</option>
                 <option value="adjacent">Muffin</option>
                 <option value="adjacent">Cinnamon Bun</option>
-                <option value="adjacent">Sliced Bread</option>
             </select>
         </div>
         <div class="elem-group">
-          <label for="room-selection">Select Resturaunt Branch</label>
+          <label for="room-selection">Select Restaurant Branch</label>
           <select id="room-selection" name="room_preference" required>
               <option value="">Choose a Branch from the List</option>
               <option value="connecting">Harrogate</option>
