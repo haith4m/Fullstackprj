@@ -1,71 +1,63 @@
+{% load static %}
 
-{%load static%}
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{%static '../static/assets/stylesheet.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
-    <title>Services</title>
-
-    <ul>
-        <li><a href="{% url 'core:index'%}">Home</a></li>
-        <li><a href="{% url 'core:news'%}">News</a></li>
-        <li><a href="{% url 'core:contact'%}">Contact</a></li>
-        <li><a href="{% url 'core:about'%}">About</a></li>
-    </ul>
+    <link rel="stylesheet" href="{% static 'assets/stylesheet.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/coffee.png' %}">
     <title>Services</title>
 </head>
 <body>
-    1169
+
+    <ul>
+        <li><a href="{% url 'core:index' %}">Home</a></li>
+        <li><a href="{% url 'core:news' %}">News</a></li>
+        <li><a href="{% url 'core:contact' %}">Contact</a></li>
+        <li><a href="{% url 'core:about' %}">About</a></li>
+    </ul>
+
     <div class="strokeme"><h1>Shop</h1></div>
-  <div class="container">
-   <a href="{% url 'core:space'%}">
-    <button>Book a space</button>
-   </a>
-   <br>
-   <br>
-   <a href="{% url 'core:baking'%}">
-    <button>Book online baking lessons</button>
-   </a>
-   <br>
-   <br>
-   <a href="{% url 'core:collection'%}">
-    <button>Order baked goods for collection</button>
-   </a>
-   <br>
-   <br>
-   <a href="{% url 'core:custom'%}"> 
-    <button>Order customisable baked hampers </button>
-   </a>
-   <br>
-   <br>
-   <a href="{% url 'core:social-media'%}"> 
-    <button>Share on Social Media (Rate my cake)</button>
-   </a>
-   <br>
-   <br>
-</div>
 
+    <div class="container"> 
+        <a href="{% url 'core:space' %}">
+            <img src="{% static 'assets/baked-goods.png' %}" alt="" height="100px" width="100px">
+        </a>
+        <p class="centered-text">Book a space</p>
+        
+        <a href="{% url 'core:baking' %}">
+            <button><img src="{% static 'assets/baked-goods.png' %}" alt="" height="100px" width="100px"></button>
+        </a>
+        <p class="centered-text">Book online baking lessons</p>
+     
+        <a href="{% url 'core:collection' %}">
+            <button><img src="{% static 'assets/baked-goods.png' %}" alt="" height="100px" width="100px"></button>
+        </a>
+        <p class="centered-text">Order baked goods for collection</p>
+       
+        <a href="{% url 'core:custom' %}">
+            <button><img src="{% static 'assets/baked-goods.png' %}" alt="" height="100px" width="100px"></button>
+        </a>
+        <p class="centered-text">Order customizable baked hampers</p>
 
-
-
-
-
-
-
+        <a href="{% url 'core:social-media' %}"> 
+            <button><img src="{% static 'assets/baked-goods.png' %}" alt="" height="100px" width="100px"></button>
+        </a>
+        <p class="centered-text">Share on Social Media (Rate my cake)</p>
+    </div>
 
     <br>
     <br>
     <br>
+
     <div class="footer">
-    
         <h3>
-            <a href=""><img src="{% static '../static/assets/twitter.png' %}" alt="" class="social-icon"></a>
-            <a href=""><img src="{% static '../static/assets/instagram.png' %}" alt="" class="social-icon"></a>
-            <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static 'assets/twitter.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static 'assets/instagram.png' %}" alt="" class="social-icon"></a>
+            <a href=""><img src="{% static 'assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
-    
+
+</body>
 </html>

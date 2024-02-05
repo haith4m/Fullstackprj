@@ -82,17 +82,20 @@ button{
 }
 
 button:hover {   
-  opacity: 0.7;   
+  opacity: 0.7;
+  transform: scale(1.1);    
 } 
+.centered-text {
+  text-align: center;
+}
 
 li a:hover {
   background-color: #111;
 }
 
-button {   
-  background-color: burlywood;   
+button {  
+  background: none;
   width: 15%;
-   color: white;   
    padding: 15px;   
    margin: 10px 0px;   
    border: none;   
@@ -111,4 +114,11 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+p{
+  width: 150px;
+  background-color:burlywood;
+  text-align: center;
+  
 }
