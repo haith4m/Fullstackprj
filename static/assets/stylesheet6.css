@@ -64,6 +64,7 @@ ul {
 
 li {
   float: left;
+  background-color: #000;
 }
 
 li a {
