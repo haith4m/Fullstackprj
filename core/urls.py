@@ -2,6 +2,8 @@ from django.urls import path, include
 from core.views import *
 from django.contrib import admin
 from . import views
+import django.contrib.auth.urls 
+
 
 app_name = "core"
 
@@ -22,6 +24,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
     path("log-out/", views.logout, name="log-out"),
+    path('',include(django.contrib.auth.urls)),
 
 
 

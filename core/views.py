@@ -1,8 +1,5 @@
-from django.shortcuts import redirect, render
-from django.http import HttpResponse
-from django.contrib.auth.models import User
-from django.contrib import messages
-
+from django.shortcuts import render, redirect
+from . forms import CreateUserForm
 # Create your views here.
 def index(request):
     return render(request,'core/index.html')
@@ -13,40 +10,33 @@ def login(request):
 def services(request):
     return render(request,'core/services.html')
 
-def register(request):
-    if request.method == "POST":
-        username = request.POST.get('username')
-        fname = request.POST.get('fname')
-        lname = request.POST.get('lname')
-        email = request.POST.get('email')
-        pass1 = request.POST.get('pass1')
-        pass2 = request.POST.get('pass2')
+def register(request):        
+    form = CreateUserForm()
 
-        # Check if passwords match
-        if pass1 != pass2:
-            messages.error(request, "Passwords do not match.")
-            return redirect('register/')
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
 
-        # Check if username exists
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "Username already exists.")
-            return redirect('register/')
+        if form.is_valid():
 
-        # Check if email exists
-        if User.objects.filter(email=email).exists():
-            messages.error(request, "Email already exists.")
-            return redirect('register/')
+            form.save()
 
-        # Create user
-        myuser = User.objects.create_user(username=username, email=email, password=pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname
-        myuser.save()
+            return redirect("http://127.0.0.1:8000/login/")
 
-        messages.success(request, "Your account has been successfully created.")
-        return redirect('login')
-        
-    return render(request, 'core/register.html')
+            
+    
+    
+    
+    context = {'registerform': form}
+    
+    return render(request, 'core/register.html',context= context)
+
+ 
+
+
+
+
+
+
 
 def forgot(request):
     return render(request,'core/forgot-username.html')

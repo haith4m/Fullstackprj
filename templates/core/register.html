@@ -18,24 +18,43 @@
 <body>
     <h1>Register Page</h1><hr>
     
-    <form action="{% url 'core:register'%}" method="post">
-    {% csrf_token %}      
-        <div class="container">  
-            <label>First Name:</label>   
-            <input type="text" id="fname" placeholder="Enter firstname" name="fname" required> <br>
+    <form method="post" autocomplete="off">
+      {% csrf_token %}
 
-            <label>Last Name:</label>   
-            <input type="text" id="lname" placeholder="Enter lastname" name="lname" required>
-            <label>Email :</label>   
-            <input type="email" placeholder="email" name="email" required> <br>
-            <label>Password :</label>   
-            <input type="password" id="pass1"placeholder="Enter Password" name="pass1" required> <br> 
-            <label>Re-enter Password :</label>   
-            <input type="password" id="pass2"placeholder="Re-enter Password" name="pass2" required> <br> 
-            <button type="submit">Register</button> <br>
-               
-        </div>   
+      {{registerform.as_p}}
+
+      <input type="submit" value="Register"/>
     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="footer">
         
         <h3>
