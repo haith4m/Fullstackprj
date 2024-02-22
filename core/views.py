@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
-
+from django.contrib.auth.models import User
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -13,7 +14,39 @@ def services(request):
     return render(request,'core/services.html')
 
 def register(request):
-    return render(request,'core/forgot.html')
+    if request.method == "POST":
+        username = request.POST.get('username')
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        pass1 = request.POST.get('pass1')
+        pass2 = request.POST.get('pass2')
+
+        # Check if passwords match
+        if pass1 != pass2:
+            messages.error(request, "Passwords do not match.")
+            return redirect('register/')
+
+        # Check if username exists
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "Username already exists.")
+            return redirect('register/')
+
+        # Check if email exists
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Email already exists.")
+            return redirect('register/')
+
+        # Create user
+        myuser = User.objects.create_user(username=username, email=email, password=pass1)
+        myuser.first_name = fname
+        myuser.last_name = lname
+        myuser.save()
+
+        messages.success(request, "Your account has been successfully created.")
+        return redirect('login')
+        
+    return render(request, 'core/register.html')
 
 def forgot(request):
     return render(request,'core/forgot-username.html')
@@ -45,7 +78,8 @@ def about(request):
 def contact(request):
     return render(request,'core/contact.html')
 
-
+def logout(request):
+    return render(request,'core/logout.html')
 
 
 
