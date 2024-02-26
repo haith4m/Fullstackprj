@@ -17,15 +17,29 @@
 </head>
 <body>
     <h1>Register Page</h1><hr>
+
+    <form action="{% url 'core:register'%}" method="post">
+        {% csrf_token %}      
+            <div class="container">  
+                <h1 class="formtitle">Login Form</h1>
+                <label>First Name:</label>   
+                {{form.username}}
+                <label>Email :</label>   
+                {{form.email}}
+                <label>Password :</label>
+                {{form.password1}}   
+                <label>Re-enter Password :</label>
+                {{form.password2}}   
+                
+                <button type="submit">Register</button> <br>
+                   
+            </div>   
+        </form>
+
     
-    <form method="post" autocomplete="off">
-      {% csrf_token %}
+    
 
-      {{registerform.as_p}}
-
-      <input type="submit" value="Register"/>
-    </form>
-
+    
 
 
 

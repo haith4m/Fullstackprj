@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from . forms import CreateUserForm
+from .forms import CreateUserForm
+
 # Create your views here.
 def index(request):
     return render(request,'core/index.html')
@@ -26,7 +27,7 @@ def register(request):
     
     
     
-    context = {'registerform': form}
+    context = {'form': form}
     
     return render(request, 'core/register.html',context= context)
 
