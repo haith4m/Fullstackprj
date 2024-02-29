@@ -16,12 +16,12 @@
     <title>Register Page</title>
 </head>
 <body>
-    <h1>Register Page</h1><hr>
+    <h1 id = "strokeme">Register Page</h1><hr>
 
     <form action="{% url 'core:register'%}" method="post">
         {% csrf_token %}      
             <div class="container">  
-                <h1 class="formtitle">Login Form</h1>
+                <h1 class="formtitle">Register Form</h1>
                 <label>First Name:</label>   
                 {{form.username}}
                 <label>Email :</label>   
@@ -34,7 +34,7 @@
                 <button type="submit">Register</button> <br>
                    
             </div>   
-        </form>
+    </form>
 
     
     
