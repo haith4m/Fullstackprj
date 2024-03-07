@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'assets/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/stylesheet5.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'assets/coffee.png' %}">
     <title>Services</title>
 </head>
@@ -31,7 +31,7 @@
     
 
     <div class="strokeme"><h1>Shop</h1></div>
-    <a href="{% url 'core:login' %}">Log Out</a>
+    
 
     <div class="container"> 
         <a href="{% url 'core:space' %}">
@@ -71,6 +71,27 @@
             <a href=""><img src="{% static 'assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
+
+
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+        </script>
 
 </body>
 </html>

@@ -1,69 +1,65 @@
-body{
+body {
   text-align: center;
   min-height: 100vh;
   background-image: url(/static/assets/top-view-coffee-accessories-table.jpg);
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
-  color: white ;
-  background-size: cover
+  color: white;
+  background-size: cover;
 }
 
-
-
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-button {   
-    background-color: burlywood;   
-    width: 25%;  
-     color: white;   
-     padding: 15px;   
-     margin: 10px 0px;   
-     border: none;   
-     cursor: pointer;   
-      }   
-form {   
-     border: 3px ;
-     width: 75%;
-     display: inline-block;
-     color: black;
-    
- }   
+button {
+  background-color: burlywood;
+  width: 25%;
+  color: white;
+  padding: 15px;
+  margin: 10px 0px;
+  border: none;
+  cursor: pointer;
+}
 
-a button:hover{
+form {
+  border: 3px;
+  width: 60%;
+  display: inline-block;
+  color: black;
+  border: 4px solid burlywood;
+  
+}
 
+button:hover,
+a button:hover {
   opacity: 0.7;
 }
 
+input[type=text],
+input[type=password] {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid burlywood;
+  box-sizing: border-box;
+}
 
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  margin: 10px 5px;
+}
 
-input[type=text], input[type=password] {   
-     width: 100%;   
-     margin: 8px 0;  
-     padding: 12px 20px;   
-     display: inline-block;   
-     border: 2px solid bur;   
-     box-sizing: border-box;   
- }  
-button:hover {   
-     opacity: 0.7;   
- }   
-.cancelbtn {   
-     width: auto;   
-     padding: 10px 18px;  
-     margin: 10px 5px;  
- }   
-     
-  
-.container {   
-     padding: 25px;   
-     background-color: white;  
- }  
+.container {
+  padding: 25px;
+  background-color: white;
+}
 
-.link{
-    text-align: left;
+.link {
+  text-align: left;
 }
 
 .footer {
@@ -73,32 +69,26 @@ button:hover {
   width: 100%;
   text-align: center;
   background-color: burlywood;
-
 }
 
- .social-icon {
-  width: 30px; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio */
-  margin: 0 5px; /* Add some spacing between icons */
+.social-icon {
+  width: 30px;
+  height: auto;
+  margin: 0 5px;
 }
- .header {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 10%;
-    height: 10%;
-    text-align: center;
- }
 
+.header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10%;
+  height: 10%;
+  text-align: center;
+}
 
-
-  .strokeme{
-    color: white;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;  
+.strokeme {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 ul {
@@ -122,31 +112,15 @@ li a {
   text-decoration: none;
 }
 
-
-
-li a:hover {
-  background-color: #111;
-}
-
-a:hover {   
-  opacity: 0.7;
-  transform: scale(1.1);    
-} 
-
-li a:hover {
-  background-color: #111;
-}
-
 .navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
-  width: 329px;
+  width: 329.43px;
 }
 
-
-
-.navbar a {
+.navbar a,
+.dropdown .dropbtn {
   float: left;
   font-size: 16px;
   color: white;
@@ -162,17 +136,15 @@ li a:hover {
 
 .dropdown .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  background-color: inherit;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover,
+.dropdown:hover, .dropbtn,
+.dropbtn:focus {
   background-color: burlywood;
 }
 
@@ -181,7 +153,7 @@ li a:hover {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 

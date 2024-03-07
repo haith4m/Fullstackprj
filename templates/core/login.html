@@ -12,8 +12,7 @@
         <a href="{% url 'core:contact'%}">Contact</a>
         <a href="{% url 'core:about'%}">About</a>
         <div class="dropdown">
-            <button class="dropbtn" onclick= myFunction()>
-                Services
+            <button class="dropbtn" onclick= myFunction()>Services
             </button>
             <div class="dropdown-content" id="myDropdown">
                 <a href="{% url 'core:space'%}">Book a Space</a>
@@ -65,5 +64,27 @@
             <a href=""><img src="{% static '../static/assets/youtube.png' %}" alt="" class="social-icon"></a>
         </h3>
     </div>
+
+
+
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
 </body>
 </html>

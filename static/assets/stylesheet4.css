@@ -5,7 +5,7 @@ body{
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
-  color: white;
+  color: black;
   background-size: cover
 }
 
@@ -16,6 +16,14 @@ body{
 h1{
     text-align: center;
 }
+#strokeme{
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;  
+}
 a button:hover{
 
   opacity: 0.7;
@@ -23,15 +31,20 @@ a button:hover{
 
 button {   
     background-color: burlywood;   
-    width: 100%;  
+    width: 60%;  
      color: white;   
-     padding: 15px;   
+     padding: 15px;
+        
      margin: 10px 0px;   
      border: none;   
-     cursor: pointer;   
+     cursor: pointer;
+     
       }   
 form {   
-     border: 3px solid #f1f1f1;   
+     
+     width: 60%;
+     margin:auto;
+     padding-top: 50px;
  }   
 input[type=text], input[type=password] {   
      width: 100%;   
@@ -115,12 +128,11 @@ button:hover {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
-  width: 329px;
+  width: 329.42px;
 }
 
-
-
-.navbar a {
+.navbar a,
+.dropdown .dropbtn {
   float: left;
   font-size: 16px;
   color: white;
@@ -136,17 +148,15 @@ button:hover {
 
 .dropdown .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  background-color: inherit;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover,
+.dropdown:hover, .dropbtn,
+.dropbtn:focus {
   background-color: burlywood;
 }
 
@@ -155,7 +165,7 @@ button:hover {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 

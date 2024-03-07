@@ -8,15 +8,25 @@
     <title>Forgotten Account Details</title>
     <link rel="stylesheet" href="{%static '../static/assets/stylesheet4.css'%}">
     <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
-    <ul>
-        <li><a href="{% url 'core:index'%}">Home</a></li>
-        <li><a href="{% url 'core:index'%}">News</a></li>
-        <li><a href="{% url 'core:index'%}">Contact</a></li>
-        <li><a href="{% url 'core:index'%}">About</a></li>
-    </ul>
+    <div class="navbar">
+        <a href="{% url 'core:index'%}">Home</a>
+        <a href="{% url 'core:contact'%}">Contact</a>
+        <a href="{% url 'core:about'%}">About</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick= myFunction()>Services
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="{% url 'core:space'%}">Book a Space</a>
+                <a href="{% url 'core:baking'%}">Book Online Baking Lessons</a>
+                <a href="{% url 'core:collection'%}">Order Baked Goods For Collection</a>
+                <a href="{% url 'core:custom'%}">Order Customisable Baked Hampers</a>
+                <a href="{% url 'core:social-media'%}">Share on Social Media(Rate my Cake)</a>
+            </div>
+        </div> 
+      </div>
 </head>
 <body>
-    <h1>Forgotten Username?</h1>
+    <h1 id="strokeme">Forgotten Username?</h1>
     <form>  
         <div class="container">   
             <label>Email:</label>   
@@ -36,5 +46,31 @@
         </div>  
         
     </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+        </script>
 </body>
 </html>
