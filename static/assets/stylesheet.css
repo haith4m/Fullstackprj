@@ -94,13 +94,18 @@ p{
   margin-left: 670px;
   
 }
+a button:hover{
 
+  opacity: 0.7;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
-  width: 400px;
+  width: 329px;
 }
+
+
 
 .navbar a {
   float: left;

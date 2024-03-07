@@ -8,22 +8,23 @@
     <link rel="icon" type="image/x-icon" href="{% static '../static/assets/coffee.png' %}">
    
     <div class="navbar">
-        <a href="{% url 'core:index'%}">Home</a>
-        <a href="{% url 'core:contact'%}">Contact</a>
-        <a href="{% url 'core:about'%}">About</a>>
-        <div class="dropdown">
-        <button class="dropbtn" onclick= myFunction()>
-            Services
-        </button>
-        <div class="dropdown-content" id="myDropdown">
-          <a href="{% url 'core:space'%}">Book a Space</a>
-          <a href="{% url 'core:baking'%}">Book Online Baking Lessons</a>
-          <a href="{% url 'core:collection'%}">Order Baked Goods For Collection</a>
-          <a href="{% url 'core:custom'%}">Order Customisable Baked Hampers</a>
-          <a href="{% url 'core:social-media'%}">Share on Social Media(Rate my Cake)</a>
-        </div>
-        </div> 
-      </div>
+      <a href="{% url 'core:index'%}">Home</a>
+      <a href="{% url 'core:contact'%}">Contact</a>
+      <a href="{% url 'core:about'%}">About</a>
+      <div class="dropdown">
+          <button class="dropbtn" onclick= myFunction()>
+              Services
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+              <a href="{% url 'core:space'%}">Book a Space</a>
+              <a href="{% url 'core:baking'%}">Book Online Baking Lessons</a>
+              <a href="{% url 'core:collection'%}">Order Baked Goods For Collection</a>
+              <a href="{% url 'core:custom'%}">Order Customisable Baked Hampers</a>
+              <a href="{% url 'core:social-media'%}">Share on Social Media(Rate my Cake)</a>
+          </div>
+      </div> 
+  </div>
+  
 
 
 
